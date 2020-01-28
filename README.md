@@ -1,2 +1,0 @@
-# silvershackcoinsAPI
-Created with CodeSandbox
