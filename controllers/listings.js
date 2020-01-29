@@ -12,7 +12,7 @@ module.exports = {
     Listings.find({ _id: req.params._id }).then(listings => res.json(listings)),
 
   showByAvailability: (req, res) =>
-    Listings.find({ available: req.params.availability }).then(listings =>
+    Listings.find({ availability: req.params.availability }).then(listings =>
       res.json(listings)
     ),
   create: (req, res) =>
