@@ -1,8 +1,6 @@
 var express = require("express");
 var path = require("path");
-var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
-var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -18,8 +16,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-app.set("port", process.env.PORT || 8080);
+app.set("port", 8123);
 
-var listener = app.listen("port", () => {
+var listener = app.listen(process.env.PORT || 8080, () => {
   console.log("Listening on port " + listener.address().port);
 });

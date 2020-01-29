@@ -15,5 +15,7 @@ module.exports = {
     ),
 
   delete: (req, res) =>
-    Listings.delete({ id: req.params.id }).then(listings => res.json(listings))
+    Listings.findOneAndDelete({ id: req.params.id }).then(listings =>
+      res.json(listings)
+    )
 };
