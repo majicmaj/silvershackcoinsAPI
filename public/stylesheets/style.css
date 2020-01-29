@@ -1,8 +1,15 @@
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+  text-decoration: none;
+  background: #eee;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #ddd;
 }

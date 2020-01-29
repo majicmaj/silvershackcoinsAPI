@@ -12,8 +12,13 @@ router.get("/test", function(req, res, next) {
 
 router.get("/listings", listingsController.index);
 router.get("/listings/:id", listingsController.show);
+router.get("/listings/id/:_id", listingsController.showById);
+router.get(
+  "/listings/availability/:available",
+  listingsController.showByAvailability
+);
 router.post("/listings/create", listingsController.create);
 router.put("/listings/edit/:id", listingsController.edit);
-router.delete("/listings/delete:id", listingsController.delete);
+router.delete("/listings/delete/:id", listingsController.delete);
 
 module.exports = router;

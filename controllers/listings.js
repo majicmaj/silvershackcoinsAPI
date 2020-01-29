@@ -4,8 +4,17 @@ module.exports = {
   index: (req, res) => Listings.find({}).then(listings => res.json(listings)),
 
   show: (req, res) =>
-    Listings.find({ id: req.params.id }).then(listings => res.json(listings)),
+    Listings.findOne({ id: req.params.id }).then(listings =>
+      res.json(listings)
+    ),
 
+  showById: (req, res) =>
+    Listings.find({ _id: req.params._id }).then(listings => res.json(listings)),
+
+  showByAvailability: (req, res) =>
+    Listings.find({ available: req.params.availability }).then(listings =>
+      res.json(listings)
+    ),
   create: (req, res) =>
     Listings.create(req.body).then(listings => res.json(listings)),
 
