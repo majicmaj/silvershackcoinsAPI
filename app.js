@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-app.set("port", 8123);
+app.set("port", process.env.PORT);
 
 var listener = app.listen(process.env.PORT || 8080, () => {
   console.log("Listening on port " + listener.address().port);
