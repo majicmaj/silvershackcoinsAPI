@@ -7,7 +7,7 @@ const ListingsSchema = new mongoose.Schema({
   img: String,
   price: Number,
   quantity: Number,
-  available: Boolean
+  availability: Boolean
 });
 
 module.exports = mongoose.model("Listings", ListingsSchema);
